@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(37, 37, 37);
+}
+.card{
+    width: 200px;
+    background-color: rgb(14, 53, 138);
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    animation-name: loadin;
+    animation-duration: 3s;
+    &__img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 2px solid rgb(224, 8, 8);
+        object-fit: cover;
+        align-self: center;
+    }
+    &__title{
+        color: white;
+        align-self: center;
+    }
+    &__button{
+        background-color: rgb(219, 151, 5);
+        color: black;
+        width: 100%;
+        padding: 15px;
+        border-radius: 30px;
+        border: 2px solid black;
+        font-size: 14px;
+        transition: font-size 1s;
+        position: relative;
+        display: inline;
+    }
+    &__button::after{       //barre underline du bouton
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        background: rgb(233, 229, 9);
+        transition: width 1s linear;        //la direction, la durée et la façon dont il va s'agrandir au moment du hover
+    }
+    &__button:hover::after{     //taille de mon underline quand il est arrivé au bout 
+       width: 170px;
+    }
+    &__button:hover{
+        font-size: 20px;
+    }
+    &__description{
+        color: whitesmoke;
+        &--active{
+            font-weight: bold;
+        }
+    }
+}
+
+@keyframes loadin{
+    0% {transform: translateX(400%);}
+    100% {transform: translateX(0%);}
+}
