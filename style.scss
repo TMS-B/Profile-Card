@@ -15,27 +15,27 @@ body{
     border-radius: 20px;
     animation-name: loadin;
     animation-duration: 3s;
-    &__img{
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
+    &__img{     //photo de profil ronde
+        height: 100px;      //définir la taille afin qu'elle soit carré
+        width: 100px;       //définir la taille afin qu'elle soit carré
+        border-radius: 50%;     //le 50% permet de la rendre ronde
         border: 2px solid rgb(224, 8, 8);
-        object-fit: cover;
+        object-fit: cover;      //permet de centrer mon image dans mon cercle
         align-self: center;
     }
     &__title{
         color: white;
         align-self: center;
     }
-    &__button{
+    &__button{      //caractéristiques de mon bouton
         background-color: rgb(219, 151, 5);
         color: black;
         width: 100%;
         padding: 15px;
         border-radius: 30px;
         border: 2px solid black;
-        font-size: 14px;
-        transition: font-size 1s;
+        font-size: 14px;        //taille de ma police avant le hover
+        transition: font-size 1s;       //le temps que va mettre ma police pour changer
         position: relative;
         display: inline;
     }
@@ -51,7 +51,7 @@ body{
     &__button:hover::after{     //taille de mon underline quand il est arrivé au bout 
        width: 170px;
     }
-    &__button:hover{
+    &__button:hover{        //caractéristique de mon bouton au moment du hover
         font-size: 20px;
     }
     &__description{
@@ -62,7 +62,7 @@ body{
     }
 }
 
-@keyframes loadin{
+@keyframes loadin{      //permet à ma carte de virer de droite vers le centre 
     0% {transform: translateX(400%);}
     100% {transform: translateX(0%);}
 }
